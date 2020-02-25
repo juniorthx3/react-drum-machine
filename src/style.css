@@ -32,9 +32,10 @@ body{
    justify-content: space-between;
    align-items: center;
    padding:10px;
-   font-family: 'Bebas Neue', Verdana;
+   font-family: 'Oxygen', Verdana;
    font-size:6vh;
-   background-color: #999;
+   background-color: #333;
+   opacity: 0.7;
    color:whitesmoke;
    margin-bottom: 10px;
    border-top: 5px solid rosybrown;

@@ -2,5 +2,5 @@
 ### Technology Stack used: ReactJS
 
 
-This React Drum Machine FreeCodeCamp Project was created using React
+This Drum Machine FreeCodeCamp Project was created using React
 

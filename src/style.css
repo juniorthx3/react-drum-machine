@@ -1,8 +1,11 @@
+html{
+     box-sizing: border-box;
+    }
 body{
     margin:0;
     padding:0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color:whitesmoke;
+    background: linear-gradient(110deg, #D0D1AC 50%, #948B89 50%);
     color:#333745;
 }
 .container{
@@ -11,15 +14,16 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh; 
+    box-sizing: border-box;
 }
 #drum-machine{
-    border:2px solid orangered;
     height:60vh;
     width: 75vh;
-    border-radius: 10px;
-    background-color: white;
-    padding:5px;
+    background-color: lightgray;
+    padding:10px;
     box-shadow: 0px 3px 3px 3px #333;
+    border-top: 10px solid #333;
+    border-bottom: 10px solid #333;
 }
 .header{
    height: 60px;
@@ -27,29 +31,32 @@ body{
    flex-direction: row;
    justify-content: space-between;
    align-items: center;
-   padding:10px 20px 10px 20px;
-   font-family: 'Audiowide', 'Verdana' ;
-   font-size:4vh;
+   padding:10px;
+   font-family: 'Bebas Neue', Verdana;
+   font-size:6vh;
    background-color: #999;
-   box-shadow: 3px 3px 5px black;
-   border-radius:5px;
+   color:whitesmoke;
    margin-bottom: 10px;
+   border-top: 5px solid rosybrown;
+   border-bottom: 5px solid rosybrown;
 }
 .controlDrum{
     display: flex;
     width:150px;
+    height: 260px;
     padding:5px;
+    margin:5px;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     border:2px solid gray;
+    border-bottom: 2px solid red;
 }
 
 #display{
     height:50px;
     width: 150px;
     margin-top: 5px;
-    background-color: rgb(30,30,30);
-    margin-bottom: 5px;
+    background-color: #252525;
 }
 
 button{

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Drumpad from './Drumpad'
+import {pads} from './pads'
 
 export class Container extends Component {
     render() {

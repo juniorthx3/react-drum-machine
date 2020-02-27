@@ -6,16 +6,26 @@ import ControlDrum from './ControlDrum'
 import Footer from './Footer'
 
 export class Container extends Component {
+    constructor(props) {
+        super(props)
+    
+        this.state = {
+             display:''
+        }
+    }
+    handleClick=display=>this.setState({ display })
+    
     render() {
         return (
             <div id="drum-machine">
                 <Header />
                 <div className="keyboard">
-                <ControlDrum />
+                <ControlDrum display={this.state.display} />
                 <div className="all-buttons">
                 {pads.map(sound=>(<Drumpad id={sound.id} 
                                            keyTrigger={sound.keyTrigger} 
-                                           src={sound.src} />
+                                           src={sound.src} 
+                                           handleClick={this.handleClick} />
                 ))}
                 </div>
                 </div>

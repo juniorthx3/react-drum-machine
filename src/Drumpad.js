@@ -5,6 +5,15 @@ class Drumpad extends Component {
     handleClick=()=>{
        this.audio.play(); 
        this.audio.currentTime=0;
+       this.props.handleClick(this.props.id)
+    }
+    handleKeyBoard=event=>{
+        if(event.keyCode === this.props.keyTrigger.charCodeAt()){
+          this.audio.play();
+          this.audio.currentTime=0;
+          this.props.handleClick=(this.props.id);
+
+        }
     }
     render() {
         return (

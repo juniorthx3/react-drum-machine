@@ -1,9 +1,9 @@
 import React from 'react'
 
-const ControlDrum=()=>{
+const ControlDrum=props=>{
     return (
         <div className="controlDrum">
-            <div id="display"></div>
+            <div id="display">{props.display}</div>
             <div>
             <button className="button"><i class="fa fa-power-off"></i></button>
             <button className="button"><i class="fa fa-volume-up"></i></button>

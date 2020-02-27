@@ -14,7 +14,7 @@ body{
     box-sizing: border-box;
 }
 #drum-machine{
-    width:40%;
+    width:550px;
     background-color: lightgray;
     padding:20px;
     box-shadow: 0px 3px 3px 3px #333;
@@ -87,6 +87,8 @@ button:hover{
 .keyboard{
     display: flex;
     justify-content: space-between;
+    border:2px solid gray;
+    padding: 20px;
 }
 
 .drum-pad{
@@ -107,7 +109,7 @@ button:hover{
 .all-buttons{
     display: grid;
     grid-template-columns: 100px 100px 100px;
-    padding:0;
+    padding-left: 20px;
 }
 
 .footer{
@@ -117,11 +119,15 @@ button:hover{
     display: flex;
     justify-content: center;
     align-content: center;
+    margin-top:10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 3px solid rgba(255, 255, 255, 0.23);
+    box-sizing: border-box;
 }
 
 @media screen and (max-width: 900px){
     #drum-machine{
-      width:75%;
+      width:400px;
       background-color: #ECECEC;
       padding:10px;
     }

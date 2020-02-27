@@ -13,7 +13,8 @@ export class Container extends Component {
              display:''
         }
     }
-    handleClick=display=>this.setState({ display })
+    
+    handleDisplay=display=>this.setState({ display })
     
     render() {
         return (
@@ -25,7 +26,7 @@ export class Container extends Component {
                 {pads.map(sound=>(<Drumpad id={sound.id} 
                                            keyTrigger={sound.keyTrigger} 
                                            src={sound.src} 
-                                           handleClick={this.handleClick} />
+                                           handleDisplay={this.handleDisplay} />
                 ))}
                 </div>
                 </div>
@@ -34,5 +35,6 @@ export class Container extends Component {
         )
     }
 }
+
 
 export default Container

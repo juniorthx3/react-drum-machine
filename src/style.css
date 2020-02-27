@@ -14,14 +14,15 @@ body{
     box-sizing: border-box;
 }
 #drum-machine{
-    height:55vh;
-    width: 75vh;
+    width:40%;
     background-color: lightgray;
-    padding:10px;
+    padding:20px;
     box-shadow: 0px 3px 3px 3px #333;
     border-top: 10px solid #333;
     border-bottom: 10px solid #333;
+    box-sizing: border-box;
 }
+
 .header{
    height: 50px;
    display: flex;
@@ -82,10 +83,12 @@ button:hover{
     border:1px solid white;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
+
 .keyboard{
     display: flex;
     justify-content: space-between;
 }
+
 .drum-pad{
   height: 80px;
   width: 80px;
@@ -100,14 +103,65 @@ button:hover{
   border-radius: 10px;
   border: 5px solid rgba(255, 255, 255, 0.23);
 }
+
 .all-buttons{
     display: grid;
     grid-template-columns: 100px 100px 100px;
+    padding:0;
 }
 
 .footer{
     font-size:5px;
+    background: rgb(55,55,55);
+    color:white;
     display: flex;
     justify-content: center;
     align-content: center;
+}
+
+@media screen and (max-width: 900px){
+    #drum-machine{
+      width:75%;
+      background-color: #ECECEC;
+      padding:10px;
+    }
+    .header{
+        height: 20px;
+        font-size:3vh;
+        background-color: #787878;
+        border-top: 3px solid rosybrown;
+        border-bottom: 3px solid rosybrown;
+    }
+    .controlDrum{
+        width:145px;
+        height: 120px;
+        padding:5px;
+        border-bottom: 30px solid rosybrown;
+    }
+
+    #display{
+        height:30px;
+        width: 120px;
+        font-size:15px;
+    }
+  
+    .button{
+        width:30px;
+        height: 30px;
+        font-size:15px;
+        background-color: lightgreen;
+    }
+    .drum-pad{
+        height:60px;
+        width: 60px;
+        font-size:15px;
+        font-style: bold;
+        border-radius: 10px;
+        border: 5px solid rgba(255, 255, 255, 0.23);
+      }
+      .all-buttons{
+        grid-template-columns: 70px 70px 70px;
+        padding-left:10px;
+     }
+    
 }

@@ -18,7 +18,7 @@ const Drumpad = props=> {
         useEffect(()=>{
           document.addEventListener("keydown", handleKeydown);
          // return document.removeEventListener("keydown", handleKeydown);
-        })
+        },[])
 
 
         return (

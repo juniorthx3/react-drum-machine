@@ -10,8 +10,8 @@ const Container = ()=> {
     const [display, setDisplay] = useState([])
     
     //handleDisplay=display=>this.setState({ display })
-     const handleDisplay=id=>{
-         setDisplay({display: id})
+     const handleDisplay=display=>{
+         setDisplay({display: display})
      }
 
         return (

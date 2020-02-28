@@ -11,13 +11,13 @@ const Drumpad = props=> {
           if(event.keyCode === props.keyTrigger.charCodeAt()){
             audio.play();
             audio.currentTime=0;
-            props.handleDisplay(props.id)
+            //props.handleDisplay(props.id)
           }
         }
 
         useEffect(()=>{
           document.addEventListener("keydown", handleKeydown);
-          return document.removeEventListener("keydown", handleKeydown);
+         // return document.removeEventListener("keydown", handleKeydown);
         })
 
 

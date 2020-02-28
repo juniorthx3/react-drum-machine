@@ -31,7 +31,7 @@ body{
    align-items: center;
    padding:10px;
    font-family: 'Oxygen', Verdana;
-   font-size:4vh;
+   font-size:25px;
    background-color: #333;
    opacity: 0.7;
    color:whitesmoke;
@@ -133,7 +133,7 @@ button:hover{
     }
     .header{
         height: 20px;
-        font-size:3vh;
+        font-size:18px;
         background-color: #787878;
         border-top: 3px solid rosybrown;
         border-bottom: 3px solid rosybrown;

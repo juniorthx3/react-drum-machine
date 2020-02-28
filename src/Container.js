@@ -14,14 +14,12 @@ const Container = ()=> {
             <div id="drum-machine">
                 <Header />
                 <div className="keyboard">
-                <ControlDrum display={()=>{
-                    setDisplay([...pads, {id: pads.id}])
-                }} />
+                <ControlDrum display={display} />
                 <div className="all-buttons">
                 {pads.map(sound=>(<Drumpad id={sound.id} 
                                            keyTrigger={sound.keyTrigger} 
                                            src={sound.src} 
-                                           handleDisplay={display} />
+                                           handleDisplay={handleDisplay} />
                 ))}
                 </div>
                 </div>

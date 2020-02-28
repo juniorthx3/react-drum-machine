@@ -11,7 +11,7 @@ const Drumpad = props=> {
           if(event.keyCode === props.keyTrigger.charCodeAt()){
             audio.play();
             audio.currentTime=0;
-            //props.handleDisplay(props.id)
+            //props.handleDisplay(props.id) BOOm
           }
         }
 

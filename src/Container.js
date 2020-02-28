@@ -11,7 +11,7 @@ const Container = ()=> {
     
     //handleDisplay=display=>this.setState({ display })
      const handleDisplay=display=>{
-         setDisplay({display: display})
+         setDisplay([{display}])
      }
 
         return (

@@ -5,7 +5,7 @@ const Drumpad = props=> {
         const handleClick = props=>{
             audio.play(); 
             audio.currentTime=0;
-            // props.handleDisplay(props.id)
+            //props.handleDisplay(props.id)
         }
         const handleKeydown=event=>{
           if(event.keyCode === props.keyTrigger.charCodeAt()){

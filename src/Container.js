@@ -10,8 +10,8 @@ const Container = ()=> {
     const [display, setDisplay] = useState([])
     
     //handleDisplay=display=>this.setState({ display })
-     const handleDisplay=()=>{
-         setDisplay([...pads, {display: pads.id}])
+     const handleDisplay=id=>{
+         setDisplay({display: id})
      }
 
         return (
@@ -23,7 +23,7 @@ const Container = ()=> {
                 {pads.map(sound=>(<Drumpad id={sound.id} 
                                            keyTrigger={sound.keyTrigger} 
                                            src={sound.src} 
-                                           handleDisplay={handleDisplay} />
+                                           handleDisplay={()=>handleDisplay(sound.id)} />
                 ))}
                 </div>
                 </div>

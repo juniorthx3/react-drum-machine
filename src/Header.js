@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Header() {
+const Header=()=>{
     return (
         <div className="header">
             <div>DrumMachine</div>
@@ -8,5 +8,4 @@ function Header() {
         </div>
     )
 }
-
 export default Header

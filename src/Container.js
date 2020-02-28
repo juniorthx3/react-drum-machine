@@ -7,7 +7,7 @@ import Footer from './Footer'
 
 const Container = ()=> {
     
-    const [display, handleDisplay] = useState('')
+    const [display, setDisplay] = useState('')
     
     //handleDisplay=display=>this.setState({ display })
 
@@ -21,7 +21,7 @@ const Container = ()=> {
                 {pads.map(sound=>(<Drumpad id={sound.id} 
                                            keyTrigger={sound.keyTrigger} 
                                            src={sound.src} 
-                                           handleDisplay={()=>handleDisplay({display: sound.id})} />
+                                           handleDisplay={()=>setDisplay([...pads, {display: sound.id}])} />
                 ))}
                 </div>
                 </div>

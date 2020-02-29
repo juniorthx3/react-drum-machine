@@ -7,7 +7,7 @@ import Footer from './Footer'
 
 const Container = ()=> {
     
-    const [display] = useState('')
+    const [display] = useState('DEVICE ON')
     const [power, setPower]=useState(true)
     
         return (

@@ -35,7 +35,11 @@ const Drumpad = props=> {
 
         return (
         <div>
-        <button className="drum-pad" id={props.id} onClick={handleClick}>{props.keyTrigger}
+        <button className="drum-pad" id={props.id} 
+                onClick={handleClick} 
+                disabled={props.power === false ? "disabled" : ''}
+        >
+        {props.keyTrigger}
         <audio className="clip" ref={ref => audio=ref} id={props.keyTrigger} src={props.src}
                onClick={handleClick}>
         </audio>

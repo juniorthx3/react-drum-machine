@@ -1,11 +1,11 @@
 import React, {useEffect} from 'react'
 
 const Drumpad = props=> {
-        let audio=document.querySelector('#clip')
+        let audio=document.getElementById(props.id);
         const handleClick = ()=>{
             if(props.power){
-              audio.play(); 
               audio.currentTime=0;
+              audio.play(); 
               document.getElementById("display").innerText=props.handleDisplay;
             }
             else{
@@ -15,8 +15,8 @@ const Drumpad = props=> {
         const handleKeydown=event=>{
           if(event.keyCode === props.keyTrigger.charCodeAt()){
             if(props.power){
-              audio.play();
               audio.currentTime=0;
+              audio.play();
               document.getElementById("display").innerText=props.handleDisplay;
             }
             else{

@@ -3,11 +3,13 @@ import React from 'react'
 const ControlDrum=props=>{
     const style={backgroundColor:'yellowgreen'}
     const style2={backgroundColor:'red'}
+    let audio=document.getElementsByClassName("clip");
     const volumeUp=()=>{
         if(props.vol < 101)
         {
             props.setVol(props.vol + 1)
             document.getElementById("display").innerText=props.handleDisplay;
+            audio.volume=Math.round(props.vol) / 100;
         }
         else{
             return;
@@ -18,6 +20,7 @@ const ControlDrum=props=>{
         {
             props.setVol(props.vol - 1)
             document.getElementById("display").innerText=props.handleDisplay;
+            audio.volume=props.vol /100;
         }
         else{
             return;
@@ -31,6 +34,7 @@ const ControlDrum=props=>{
                     title="POWER ON or OFF the DEVICE"
                     style={props.power ? style : style2} 
                     onClick={()=>props.setPower(!props.power)}
+                    vol={props.vol}
             >
                 <i className="fa fa-power-off"></i>
             </button>
@@ -48,6 +52,7 @@ const ControlDrum=props=>{
             >
                 <i className="fa fa-volume-down"></i></button>
             </div>
+            {console.log(audio)}
         </div>
     )
 }

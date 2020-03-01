@@ -20,7 +20,7 @@ const Container = ()=> {
                              setPower={setPower}
                              vol={vol}
                              setVol={setVol}
-                             handleDisplay={power ? "VOLUME: "+vol : 'DEVICE OFF'}
+                             handleDisplay={power ? "VOLUME: "+ vol : 'DEVICE OFF'}
                 />
                 <div className="all-buttons">
                 {pads.map(sound=>(<Drumpad key={sound.id} 
@@ -34,9 +34,8 @@ const Container = ()=> {
                 ))}
                 </div>
                 </div>
-                <Footer />
-                {console.log(display)}
                 {console.log(vol)}
+                <Footer />
             </div>
         )
 }

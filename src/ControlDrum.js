@@ -52,7 +52,6 @@ const ControlDrum=props=>{
             >
                 <i className="fa fa-volume-down"></i></button>
             </div>
-            {console.log(audio)}
         </div>
     )
 }

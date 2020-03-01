@@ -36,6 +36,7 @@ const Drumpad = props=> {
         return (
         <div>
         <button className="drum-pad" id={props.id} 
+                title={props.id}
                 onClick={handleClick} 
                 disabled={props.power === false ? "disabled" : ''}
         >

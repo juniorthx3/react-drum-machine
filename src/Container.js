@@ -9,12 +9,19 @@ const Container = ()=> {
     
     const [display] = useState('DEVICE ON')
     const [power, setPower]=useState(true)
+    const [vol, setVol]=useState(40)
     
         return (
             <div id="drum-machine">
                 <Header />
                 <div className="keyboard">
-                <ControlDrum display={power ? display : 'DEVICE OFF'} power={power} setPower={setPower} />
+                <ControlDrum display={power ? display : 'DEVICE OFF'} 
+                             power={power} 
+                             setPower={setPower}
+                             vol={vol}
+                             setVol={setVol}
+                             handleDisplay={power ? "VOLUME: "+vol : 'DEVICE OFF'}
+                />
                 <div className="all-buttons">
                 {pads.map(sound=>(<Drumpad key={sound.id} 
                                            id={sound.id} 
@@ -28,6 +35,8 @@ const Container = ()=> {
                 </div>
                 </div>
                 <Footer />
+                {console.log(display)}
+                {console.log(vol)}
             </div>
         )
 }

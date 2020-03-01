@@ -34,6 +34,7 @@ const Container = ()=> {
                 ))}
                 </div>
                 </div>
+
                 <Footer />
             </div>
         )

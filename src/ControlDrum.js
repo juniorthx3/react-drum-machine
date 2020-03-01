@@ -9,7 +9,7 @@ const ControlDrum=props=>{
         {
             props.setVol(props.vol + 1)
             document.getElementById("display").innerText=props.handleDisplay;
-            audio.volume=Math.round(props.vol) / 100;
+            audio.volume=props.vol /100;
         }
         else{
             return;
@@ -20,7 +20,7 @@ const ControlDrum=props=>{
         {
             props.setVol(props.vol - 1)
             document.getElementById("display").innerText=props.handleDisplay;
-            audio.volume=props.vol /100;
+            audio.volume=props.vol / 100;
         }
         else{
             return;

@@ -3,24 +3,24 @@ import React from 'react'
 const ControlDrum=props=>{
     const style={backgroundColor:'yellowgreen'}
     const style2={backgroundColor:'red'}
-    let audio=document.getElementsByClassName("clip");
+
     const volumeUp=()=>{
-        if(props.vol < 101)
+        if(props.vol <= 100)
         {
             props.setVol(props.vol + 1)
             document.getElementById("display").innerText=props.handleDisplay;
-            audio.volume=props.vol /100;
+            document.getElementsByClassName('clip').volume=props.vol / 100;
         }
         else{
             return;
         }
     }
     const volumeDown=()=>{
-        if(props.vol > 0)
+        if(props.vol >= 0 )
         {
             props.setVol(props.vol - 1)
             document.getElementById("display").innerText=props.handleDisplay;
-            audio.volume=props.vol / 100;
+            document.getElementsByClassName('clip').volume=props.vol / 100;
         }
         else{
             return;

@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react'
 
 const Drumpad = props=> {
-        let audio=document.getElementById(props.id);
+  let audio=document.getElementsByClassName("clip");
         const handleClick = ()=>{
             if(props.power){
               audio.currentTime=0;
@@ -32,7 +32,6 @@ const Drumpad = props=> {
           }
         })
 
-
         return (
         <div>
         <button className="drum-pad" id={props.id} 
@@ -41,8 +40,7 @@ const Drumpad = props=> {
                 disabled={props.power === false ? "disabled" : ''}
         >
         {props.keyTrigger}
-        <audio className="clip" ref={ref => audio=ref} id={props.keyTrigger} src={props.src}
-               onClick={handleClick}>
+        <audio className="clip" ref={ref => audio=ref} id={props.keyTrigger} src={props.src}>
         </audio>
         </button>
         </div>

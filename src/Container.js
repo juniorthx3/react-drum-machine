@@ -7,10 +7,11 @@ import Footer from './Footer'
 
 const Container = ()=> {
     
-    const [display] = useState('DEVICE ON')
-    const [power, setPower]=useState(true)
-    const [vol, setVol]=useState(40)
+    const [display] = useState('DEVICE ON');
+    const [power, setPower]=useState(true);
+    const [vol, setVol]=useState(40);
 
+     
         return (
             <div id="drum-machine">
                 <Header />
@@ -34,8 +35,9 @@ const Container = ()=> {
                 ))}
                 </div>
                 </div>
-
                 <Footer />
+                {console.log(vol)}
+                {console.log(document.getElementsByClassName('clip').volume)}
             </div>
         )
 }

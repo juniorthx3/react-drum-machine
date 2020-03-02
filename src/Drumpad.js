@@ -2,11 +2,13 @@ import React, {useEffect} from 'react'
 
 const Drumpad = props=> {
   let audio=document.getElementsByClassName("clip");
+
         const handleClick = ()=>{
             if(props.power){
               audio.currentTime=0;
               audio.play(); 
               document.getElementById("display").innerText=props.handleDisplay;
+              audio.volume=props.vol;
             }
             else{
               return;
@@ -18,6 +20,7 @@ const Drumpad = props=> {
               audio.currentTime=0;
               audio.play();
               document.getElementById("display").innerText=props.handleDisplay;
+              audio.volume=props.vol;
             }
             else{
               return;

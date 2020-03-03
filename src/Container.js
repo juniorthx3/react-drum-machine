@@ -64,8 +64,6 @@ const Container = props=> {
                 </div>
                 </div>
                 <Footer />
-                {console.log(vol)}
-                {console.log(document.getElementsByClassName('clip').volume)}
             </div>
         )
 }
